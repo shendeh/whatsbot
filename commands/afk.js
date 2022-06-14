@@ -8,9 +8,9 @@ const execute = async (client, msg, args) => {
     switch (commandType) {
       case "on": {
         let getstatus = afkStatus();
-        if (getstatus.on) throw new Error("Already AFK mode is on.");
+        if (getstatus.on) throw new Error("Already afk mode is on");
         let message = args.join(" ");
-        if (!message) message = "Currently I'm away. I will be back soon!";
+        if (!message) message = "Currently I'm away I will be back soon";
         startAfk(message);
         let msgtosend = `AFK mode is now on.\n\nMessage: ${message}`;
         await client.sendMessage(msg.to, msgtosend);
@@ -18,9 +18,9 @@ const execute = async (client, msg, args) => {
       }
       case "off": {
         let getstatus = afkStatus();
-        if (!getstatus.on) throw new Error("Already AFK mode is off.");
+        if (!getstatus.on) throw new Error("Already afk mode is off");
         stopAfk();
-        let msgtosend = "AFK mode is now off.";
+        let msgtosend = "Afk mode is now off";
         await client.sendMessage(msg.to, msgtosend);
         break;
       }
@@ -35,7 +35,7 @@ const execute = async (client, msg, args) => {
       }
       default: {
         throw new Error(
-          "Invalid argument. Valid arguments are: on, off, status"
+          "Invalid argument valid arguments are : on , off , status"
         );
       }
     }
@@ -46,11 +46,11 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-  name: "afk", //name of the module
+  name: "Afk", //name of the module
   description: "Turn on or off afk mode", // short description of what this command does
   command: "!afk", //command with prefix. Ex command: '!test'
   commandType: "admin", // admin|info|plugin
   isDependent: false, //whether this command is related/dependent to some other command
-  help: "*Afk*\n\n1. *!afk on Message* to turn on afk.\n2. *!afk off* to turn off afk.\n3. *!afk status* to check current status of afk.", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+  help: "*Afk*\n\n1. *!afk on message* to turn on afk\n\n2. *!afk off* to turn off afk\n\n3. *!afk status* to check current status of afk", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
   execute,
 };
