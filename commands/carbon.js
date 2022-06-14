@@ -31,9 +31,9 @@ const execute = async (client,msg,args) => {
     }
 
     if (data == "error") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to create the Carbon.```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened to create the carbon```");
     } else {
-        await client.sendMessage(msg.to, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `Carbon for 👇\n` + "```" + msg.body.replace("!carbon ", "") + "```" });
+        await client.sendMessage(msg.to, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `Carbon for\n\n` + "```" + msg.body.replace("!carbon ", "") + "```" });
     }
 
 };
@@ -45,5 +45,5 @@ module.exports = {
     command: '!carbon',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Carbon*\n\nGenerate beautiful image with carbon.now.sh. Just send the text it will generate an image for you.\n\n*!carbon [Text]*\nor,\nReply a message with *!carbon* to Create`,
+    help: `*Carbon*\n\nGenerate beautiful image with carbon.now.sh. Just send the text it will generate an image for you\n\n*!carbon [Text]*\n\nor\nReply a message with *!carbon* to create`,
     execute};
