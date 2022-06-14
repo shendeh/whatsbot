@@ -18,13 +18,13 @@ async function search(query) {
                 content += `*${i + 1}.* ${response[i].title} - ${response[i].more_info.singers}\n`;
                 songarray.push({ key: i + 1, id: response[i].id });
             }
-            content += `\nReply this message with \`\`\`!dldsong [number]\`\`\` to download !\n*Ex.* !dldsong 1`;
+            content += `\n\nReply this message with \`\`\`!dldsong [number]\`\`\` to download !\n*Ex* !dldsong 1`;
             return { status: true, content, songarray };
         }
     } catch (error) {
         return {
             status: false,
-            content: `🙇‍♂️ *Error*\n\n` + "```Result not found for " + query + ", Please try again with different keyword!```",
+            content: `*Error*\n\n` + "```Result not found for " + query + ", Please try again with different keyword```",
             songarray: []
         };
     }
@@ -45,14 +45,14 @@ async function download(songkey, id) {
                 return {
                     status: true,
                     content: {
-                        text: `🎶 *${data.song}* _(${data.year})_\n\n📀 *Artist :*  ` + "```" + data.singers + "```\n📚 *Album :*  " + "```" + data.album + "```" + `\n\n*Download Url* 👇\nhttps://musicder-prod.vercel.app/download/${data.id}`,
+                        text: `🎶 *${data.song}* _(${data.year})_\n\n📀 *Artist :*  ` + "```" + data.singers + "```\n📚 *Album :*  " + "```" + data.album + "```" + `\n\n*Download url*\nhttps://musicder-prod.vercel.app/download/${data.id}`,
                         image: await image(data.image)
                     }
                 };
             } catch (w) {
                 return {
                     status: false,
-                    content: `🙇‍♂️ *Error*\n\n` + "```Something went wrong while fetching this song.```",
+                    content: `*Error*\n\n` + "```Something went wrong while fetching this song```",
                 };
             }
         } 
@@ -60,7 +60,7 @@ async function download(songkey, id) {
         else {
             return {
                 status: false,
-                content: `🙇‍♂️ *Error*\n\n` + "```This song key is invalid please send the correct song key.\nEx. !dldsong 1```",
+                content: `*Error*\n\n` + "```This song key is invalid please send the correct song key\n\nEx !dldsong 1```",
             };
         }
 
@@ -68,7 +68,7 @@ async function download(songkey, id) {
         console.log(error);
         return {
             status: false,
-            content: `🙇‍♂️ *Error*\n\n` + "```Cache not found please search the song again```",
+            content: `*Error*\n\n` + "```Cache not found please search the song again```",
         };
     }
 }
