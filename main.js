@@ -30,7 +30,7 @@ client.initialize();
 
 client.on("auth_failure", () => {
   console.error(
-    "There is a problem in authentication, Kindly set the env var again and restart the app"
+    "There is a problem in authentication , kindly set the env var again and restart the app"
   );
 });
 
@@ -92,7 +92,7 @@ client.on("message_create", async (msg) => {
         !(await pmpermit.isPermitted(otherChat.number)) &&
         !otherChat.isMe &&
         !msg.body.startsWith("!") &&
-        !msg.body.endsWith("_Powered by WhatsBot_")
+        !msg.body.endsWith("Powered by whats")
       ) {
         await pmpermit.permit(otherChat.number);
         await logger(
@@ -120,7 +120,7 @@ client.on("message_create", async (msg) => {
     } else {
       await client.sendMessage(
         msg.to,
-        "No such command found. Type !help to get the list of available commands"
+        "No such command found type !help to get the list of available commands"
       );
     }
   }
@@ -136,7 +136,7 @@ client.on("message_revoke_everyone", async (after, before) => {
     ) {
       client.sendMessage(
         before.from,
-        "_You deleted this message_ 👇👇\n\n" + before.body
+        "You deleted this message\n\n" + before.body
       );
     }
   }
@@ -148,7 +148,7 @@ client.on("disconnected", (reason) => {
 
 app.get("/", (req, res) => {
   res.send(
-    '<h1>This server is powered by Whatsbot<br><a href="https://github.com/tuhinpal/WhatsBot">https://github.com/tuhinpal/WhatsBot</a></h1>'
+    '<h1>This server is powered by whats<br><a href="https://github.com/Dark-team-11/Whats">https://github.com/Dark-team-11/Whats</a></h1>'
   );
 });
 
