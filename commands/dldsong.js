@@ -20,7 +20,7 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-    name: 'Download Song',
+    name: 'Download song',
     description: 'Download selected song from the list',
     command: '!dldsong',
     commandType: 'plugin',
