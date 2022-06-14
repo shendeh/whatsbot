@@ -6,7 +6,7 @@ function startAfk(message) {
     path.join(__dirname, `../cache/afk.json`),
     JSON.stringify({
       on: true,
-      message: message || "Currently I'm away. I will be back soon!",
+      message: message || "Currently I'm away I will be back soon",
     })
   );
 }
