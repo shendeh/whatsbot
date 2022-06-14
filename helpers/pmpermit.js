@@ -107,26 +107,26 @@ async function handler(id) {
     return {
       permit: false,
       block: false,
-      msg: `*✋ Wait*\n\n Please wait until I will get back to Online, Kindly don't send another message.\n\n _Powered by WhatsBot_`,
+      msg: `Hey I haven't approved you for personal messaging me yet , my mistress will respond when she comes back online if she wants to\n\nPlease don't spam unless you wish to be blocked and reported`,
     };
   } else if (checkPermit.found && !checkPermit.permit) {
     if (checkPermit.times > 3) {
       return {
         permit: false,
         block: true,
-        msg: `*❌ Blocked*\n\n You have been blocked for spamming.\n\n _Powered by WhatsBot_`,
+        msg: `Umm as I have already mentioned above that this is not a right place for you to spam however you ignored that message so I just blocked you\n\nNow you can't do anything until my mistress comes online and unblocks you ! Good bye have a great day ahead`,
       };
     } else {
       var updateIt = await updateviolant(id, checkPermit.times + 1);
       if (!updateIt) {
         console.log(
-          `That's an error, Possible reason is your MongoDB url is not working ❌`
+          `That's an error , possible reason is your mongo db url is not working`
         );
       }
       return {
         permit: false,
         block: false,
-        msg: `*✋ Wait*\n\nPlease wait until I will get back to Online, Kindly don't send another message. You have ${checkPermit.times} warning(s).\n\n _Powered by WhatsBot_`,
+        msg: `You have ${checkPermit.times} warning(s)`,
       };
     }
   } else {
