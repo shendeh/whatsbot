@@ -25,7 +25,7 @@ const execute = async (client,msg) => {
         if (data == "error") {
             quotedMsg.reply(`Error occured while reading the image. Please make sure the image is clear.`);
         } else {
-            quotedMsg.reply(`*Extracted Text from the Image*  👇\n\n${data.parsedText}`);
+            quotedMsg.reply(`*Extracted text from the image*\n\n${data.parsedText}`);
         }
     }
     
@@ -35,10 +35,10 @@ const execute = async (client,msg) => {
 };
 
 module.exports = {
-    name: 'OCR',
+    name: 'Ocr',
     description: 'Extracts text content from given image',
     command: '!ocr',
     commandType: 'plugin',
     isDependent: false,
-    help: `*OCR*\n\nReads text from any readable image. \n\n*Reply a photo with !ocr to read text from that image.*\n`,
+    help: `*Ocr*\n\nReads text from any readable image\n\n*Reply a photo with !ocr to read text from that image*`,
     execute};
