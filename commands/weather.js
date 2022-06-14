@@ -20,13 +20,13 @@ const execute = async (client, msg, args) => {
   if (data == "error") {
     await client.sendMessage(
       msg.to,
-      `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to fetch Weather```"
+      `*Error*\n\n` + "```Something unexpected happened to fetch weather```"
     );
   } else {
     var weather = data[0];
     await client.sendMessage(
       msg.to,
-      `*Today's Weather at ${weather.location.name}*\n` +
+      `*Today's weather at ${weather.location.name}*\n` +
         "```" +
         weather.current.skytext +
         " (" +
@@ -48,6 +48,6 @@ module.exports = {
   command: "!weather",
   commandType: "plugin",
   isDependent: false,
-  help: `*Weather*\n\nLookup a city's weather with this command.\n\n*!weather [Place-Name]*\nTo check a weather`,
+  help: `*Weather*\n\nLookup a city's weather with this command\n\n*!weather [Place-Name]*\n\nTo check a weather`,
   execute,
 };
