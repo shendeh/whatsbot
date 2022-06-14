@@ -15,19 +15,19 @@ const execute = async (client, msg, args) => {
   if (data == "error") {
     await client.sendMessage(
       msg.to,
-      `🙇‍♂️ *Error*\n\n` +
-        "```Something Unexpected Happened while Lookup on Urban Dictionary```"
+      `*Error*\n\n` +
+        "```Something unexpected happened while lookup on urban dictionary```"
     );
   } else {
     await client.sendMessage(
       msg.to,
-      "*Term:* ```" +
+      "*Term* : ```" +
         args.join(" ") +
         "```\n\n" +
-        "*Definition:* ```" +
+        "*Definition* : ```" +
         data[0].definition +
         "```\n\n" +
-        "*Example:* ```" +
+        "*Example* : ```" +
         data[0].example +
         "```"
     );
@@ -35,11 +35,11 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-  name: "Urban Dictionary",
+  name: "Urban dictionary",
   description: "Gets dictionary meanings of words",
   command: "!ud",
   commandType: "plugin",
   isDependent: false,
-  help: `*Urban Dictionary*\n\nUrban Dictionary is a crowdsourced online dictionary for slang words and phrases.\n\n*!ud [Word]*\nto search a word using Urban Dictionary`,
+  help: `*Urban dictionary*\n\nUrban dictionary is a crowdsourced online dictionary for slang words and phrases\n\n*!ud [Word]*\nto search a word using urban dictionary`,
   execute,
 };
