@@ -47,19 +47,19 @@ const execute = async (client,msg,args) => {
     }
 
     if (data == "error") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to fetch the YouTube video```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened to fetch the youtube video```");
     } else {
-        await client.sendMessage(msg.to, new MessageMedia(data.image.mimetype, data.image.data, data.image.filename), { caption: `*${data.title}*\n\nViews: ` + "```" + data.views + "```\nLikes: " + "```" + data.likes + "```\nComments: " + "```" + data.comments + "```\n\n*Download Link* 👇\n" + "```" + data.download_link + "```" });
+        await client.sendMessage(msg.to, new MessageMedia(data.image.mimetype, data.image.data, data.image.filename), { Caption : `*${data.title}*\n\nViews : ` + "```" + data.views + "```\nLikes : " + "```" + data.likes + "```\nComments : " + "```" + data.comments + "```\n\n*Download link*\n" + "```" + data.download_link + "```" });
     }
 };
 
 
 module.exports = {
-  name: "YouTube Download",
+  name: "Youtube download",
   description: "Gets download link for youtube video",
   command: "!yt",
   commandType: "plugin",
   isDependent: false,
-  help: `*Youtube*\n\nDownload a Youtube video with this command.\n\n*!yt [Youtube-Link]*\nor,\nReply a message with *!yt* to Download`,
+  help: `*Youtube*\n\nDownload a youtube video with this command\n\n*!yt [Youtube-Link]*\nor,\nReply a message with *!yt* to download`,
   execute,
 };
