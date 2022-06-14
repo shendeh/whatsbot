@@ -31,10 +31,10 @@ const execute = async (client,msg,args) => {
     msg.delete(true);
     let data = await getPrice(args[0]);
     if (data == "error") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Something unexpected happened while fetching Cryptocurrency Price```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened while fetching cryptocurrency price```");
     }
     if (data == "unsupported") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Support for this CryptoCurrency is not yet added```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Support for this crypto currency is not yet added```");
     }
     else {
         let date = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
@@ -43,10 +43,10 @@ const execute = async (client,msg,args) => {
 };
 
 module.exports = {
-    name: 'Crypto Currency',
+    name: 'Crypto currency',
     description: 'Gets price info for requested crypto currency',
     command: '!crypto',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Crypto Currency*\n\nGet current price of cryptocurrency. \n\n*!crypto [crypto-code]*\n`,
+    help: `*Crypto Currency*\n\nGet current price of crypto currency\n\n*!crypto [crypto-code]*\n`,
     execute};
