@@ -40,7 +40,7 @@ const execute = async (client, msg, args) => {
     if (data == "error") {
         await client.sendMessage(
             msg.to,
-            `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened while translate```"
+            `*Error*\n\n` + "```Something unexpected happened while translate```"
         );
     } else {
         await client.sendMessage(
@@ -90,6 +90,6 @@ module.exports = {
     command: "!tr",
     commandType: "plugin",
     isDependent: false,
-    help: `*Translator*\n\nIt will translate text in different languages.\n\n_Usage:_\n1. *!tr [Text]*\n2. Reply with *!tr*\n3. *!tr [Output-Language] [Text]*\n4.Reply with \n*!tr [Output-Language]*`,
+    help: `*Translator*\n\nIt will translate text in different languages\n\nUsage :\n\n1. *!tr [Text]*\n\n2. Reply with *!tr*\n\n3. *!tr [Output-Language] [Text]*\n\n4.Reply with \n*!tr [Output-Language]*`,
     execute,
 };
