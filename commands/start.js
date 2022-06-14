@@ -15,8 +15,8 @@ async function get(battery, phn_info) {
 
   return {
     msg:
-      `*Whatsbot*\n\nThis chat is Powered By *Whatsbot*\n\n*Battery:* ${batttxt}\n*Device:* ${phn_info.device_manufacturer} ${phn_info.device_model}\n*WA Version:* ${phn_info.wa_version}\n*Whatsbot Version:* ${packageJson.version}\n*Pmpermit:* ${config.pmpermit_enabled}\n\n*Official Repository Url 👇*\n` +
-      "```https://github.com/tuhinpal/WhatsBot```",
+      `*Whats*\n\nThis chat is powered by *whats*\n\n*Battery* : ${batttxt}\n*Device* : ${phn_info.device_manufacturer} ${phn_info.device_model}\n*Wa version* : ${phn_info.wa_version}\n*Whats version* : ${packageJson.version}\n*Pmpermit* : ${config.pmpermit_enabled}\n\n*Official repository url*\n` +
+      "```https://github.com/Dark-team-11/Whats```",
     mimetype: "image/jpeg",
     data: Buffer.from(
       (
@@ -44,7 +44,7 @@ const execute = async (client, msg) => {
 
 module.exports = {
   name: "Start",
-  description: "Get device, client and bot info",
+  description: "Get device , client and bot info",
   command: "!start",
   commandType: "info",
   isDependent: false,
