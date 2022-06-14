@@ -30,8 +30,8 @@ async function emailVerifier(email) {
         }
     } catch (error) {
         return (
-            `🙇‍♂️ *Error*\n\n` +
-            "```Something Unexpected Happened while validating this email.```"
+            `*Error*\n\n` +
+            "```Something unexpected happened while validating this email```"
         );
     }
 }
@@ -50,11 +50,11 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-    name: "Verify Email",
+    name: "Verify email",
     description: "Verify the credibility of a given email",
     command: "!verifyemail",
     commandType: "plugin",
     isDependent: false,
-    help: `*Email Verifier*\n\nTest an Email's validity before it bounce. \n\n*Reply an email with !verifyemail*\nor,\n*!verifyemail [Email Address]*`,
+    help: `*Email verifier*\n\nTest an email's validity before it bounce\n\n*Reply an email with !verifyemail*\n\nor,\n\n*!verifyemail [Email Address]*`,
     execute,
 };
