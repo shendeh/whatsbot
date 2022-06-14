@@ -16,7 +16,7 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-  name: "Search song",
+  name: "Song",
   description: "Search songs on jiosaavn",
   command: "!song",
   commandType: "plugin",
