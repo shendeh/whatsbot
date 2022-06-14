@@ -1,7 +1,7 @@
 //jshint esversion:8
 const execute = async (client, msg) => {
   if (!msg.to.includes("-")) {
-    await msg.reply(`Congratulations you have been blocked as you were spamming my inbox`);
+    await msg.reply(`Umm as I have already mentioned above that this is not a right place for you to spam however you ignored that message so I just blocked you\n\nNow you can't do anything until my mistress comes online and unblocks you ! Good bye demon have a great day ahead`);
     let chat = await msg.getChat();
     let contact = await chat.getContact();
     contact.block();
