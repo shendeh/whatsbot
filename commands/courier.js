@@ -11,7 +11,7 @@ async function getTrackingDetails(trackingService, trackingNumber) {
         url: `https://sjcourierapi.deta.dev/${trackingService}/${trackingNumber}` //Feel free to use this API for your own use.
     };
     console.log(mainconfig.url);
-    let statusString = "Unable to get information for your shipment. Please check the tracking id or try again later!"
+    let statusString = "Unable to get information for your shipment please check the tracking id or try again later"
     return axios(mainconfig)
         .then(async function (response) {
             let data = response.data;
@@ -48,18 +48,18 @@ const execute = async (client, msg, args) => {
     msg.delete(true);
     let data = await getTrackingDetails(args[0], args[1]);
     if (data == "error") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Something unexpected happened while fetching the courier details.```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened while fetching the courier details```");
     } else {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Courier/Shipment Details*\n\n` + "```" + data.status + "```");
+        await client.sendMessage(msg.to, `*Shipment details*\n\n` + "```" + data.status + "```");
     }
 };
 
 module.exports = {
     name: 'Courier',
-    description: 'Get courier details from multiple providers. Currently supports: Gati Express and Ekart',
+    description: 'Get courier details from multiple providers currently supports : Gati express and ekart',
     command: '!courier',
     commandType: 'plugin',
     isDependent: false,
-    help: `*courier*\n\nGet information about your couriers and shipments. \n\n*!courier [courier-name] [tracking-id]*\n\nSupported: Ekart, Gati`,
+    help: `*courier*\n\nGet information about your couriers and shipments\n\n*!courier [courier-name] [tracking-id]*\n\nSupported : Ekart , gati`,
     execute
 };
