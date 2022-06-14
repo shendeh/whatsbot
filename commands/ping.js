@@ -1,10 +1,10 @@
 //jshint esversion:6
 
-const execute = (client,msg) => msg.reply('Ping pong ping');
+const execute = (client,msg) => msg.reply('Pong\n\nPowered by whats');
 
 module.exports = {
     name: 'Ping',
-    description: 'Responds with ping pong ping',
+    description: 'Responds with pong',
     command: '!ping',
     commandType: 'info',
     isDependent: false,
