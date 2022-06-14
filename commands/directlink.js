@@ -28,7 +28,7 @@ const execute = async (client,msg) => {
         if (data == "error") {
             quotedMsg.reply(`Error occured while create direct link.`);
         } else {
-            quotedMsg.reply(`🔗 *Direct Link 👇*\n\n` + "```" + data + "```");
+            quotedMsg.reply(`*Direct link*\n\n` + "```" + data + "```");
         }
     }
     else{
@@ -38,10 +38,10 @@ const execute = async (client,msg) => {
 
 
 module.exports = {
-    name: 'Direct Link',
-    description: 'uploads media toh telegra.ph and creates a direct download link',
+    name: 'Direct link',
+    description: 'Uploads media toh telegra.ph and creates a direct download link',
     command: '!directlink',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Directlink*\n\nIt will generate photo's directlink for you.\n\nReply a photo with *!directlink* to Create`,
+    help: `*Directlink*\n\nIt will generate photo's directlink for you\n\nReply a photo with *!directlink* to create`,
     execute};
