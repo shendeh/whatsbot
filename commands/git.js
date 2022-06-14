@@ -43,7 +43,7 @@ async function gitinfo(url) {
     } catch (err) {
         return {
             status: false,
-            msg: "This repository is not available. Maybe this is not a public repository."
+            msg: "This repository is not available maybe this is not a public repository"
         };
     }
 }
@@ -57,15 +57,15 @@ const execute = async (client,msg,args) => {
         }
         await client.sendMessage(msg.to, data.msg);
     } else {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```" + data.msg + "```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```" + data.msg + "```");
     }
 };
 
 module.exports = {
-    name: 'Git Info',
-    description: 'gets information for requested git repo',
+    name: 'Git info',
+    description: 'Gets information for requested git repo',
     command: '!git',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Github*\n\nGet a github repository in zip format with it's details.\n\nSend a message with *!git [Github-Url]* to execute.`,
+    help: `*Github*\n\nGet a github repository in zip format with it's details\n\nSend a message with *!git [Github-Url]* to execute`,
     execute};
