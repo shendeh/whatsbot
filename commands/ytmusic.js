@@ -45,7 +45,7 @@ const execute = async (client,msg,args) => {
     }
 
     if (data == "error") {
-        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened to fetch the youyube video```");
+        await client.sendMessage(msg.to, `*Error*\n\n` + "```Something unexpected happened to fetch the youtube video```");
     } else {
         await client.sendMessage(msg.to, new MessageMedia(data.image.mimetype, data.image.data, data.image.filename), { Caption : `*${data.title}*\n\nViews: ` + "```" + data.views + "```\nLikes : " + "```" + data.likes + "```\nComments : " + "```" + data.comments + "```\n\n*Download mp3*\n" + "```" + data.download_link + "```" });
     }
