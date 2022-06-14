@@ -10,7 +10,7 @@ const execute = async (client, msg, args) => {
     let query = args.join(" ");
     let data = await axios.get(`${imdb_host}/search?query=${query}`);
     data = data.data;
-    if (data.results.length == 0) throw new Error("No results found.");
+    if (data.results.length == 0) throw new Error("No results found");
     let result = data.results[0];
 
     result = await axios.get(`${imdb_host}${result.api_path}`);
@@ -40,11 +40,11 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-  name: "IMDB", //name of the module
-  description: "Find content details from IMDB", // short description of what this command does
+  name: "Imdb", //name of the module
+  description: "Find content details from imdb", // short description of what this command does
   command: "!imdb", //command with prefix. Ex command: '!test'
   commandType: "plugin", // admin|info|plugin
   isDependent: false, //whether this command is related/dependent to some other command
-  help: "Type *!imdb {query}* to get detail of a content.\n\n*Ex.* !imdb rrr", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
+  help: "Type *!imdb {query}* to get detail of a content\n\n*Ex* !imdb rrr", // a string descring how to use this command Ex = help : 'To use this command type !test arguments'
   execute,
 };
