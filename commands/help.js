@@ -37,5 +37,5 @@ module.exports = {
     command: '!help',
     commandType: 'info',
     isDependent: false,
-    help: 'To get more info use ```!help [command]```Ex : ```!help ping```',
+    help: 'To get more info use ```!help [command]``` Ex : ```!help ping```',
     execute};
