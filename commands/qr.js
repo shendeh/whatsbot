@@ -26,14 +26,14 @@ const execute = async (client,msg,args) => {
         data = await qrgen(args.join(' '));
     }
     
-    await client.sendMessage(msg.to, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `QR code for 👇\n` + "```" + msg.body + "```" });
+    await client.sendMessage(msg.to, new MessageMedia(data.mimetype, data.data, data.filename), { Caption : `Qr code for\n\n` + "```" + msg.body + "```" });
 };
 
 module.exports = {
-    name: 'QR generator',
-    description: 'Generates QR for given text',
+    name: 'Qr generator',
+    description: 'Generates qr for given text',
     command: '!qr',
     commandType: 'plugin',
     isDependent: false,
-    help: '`*QR generator*\n\nGenerate QR code with this module. Just send the text it will generate QR Code image for you.\n\n*!qr [Text]*\nor,\nReply a message with *!qr* to Create`',
+    help: '`*Qr generator*\n\nGenerate qr code with this module ! Just send the text it will generate qr code image for you\n\n*!qr [Text]*\n\nor\nReply a message with *!qr* to create`',
     execute};
