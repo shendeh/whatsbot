@@ -1,7 +1,7 @@
 {
-  "name": "Whatsbot",
-  "description": "Modular Us**B*t for Whatsapp",
-  "repository": "https://github.com/tuhinpal/WhatsBot",
+  "name": "Whats",
+  "description": "Modular userbot for what's app",
+  "repository": "https://github.com/Dark-team-11/Whats",
   "logo": "https://telegra.ph/file/96ccad5945c18944c5f15.png",
   "keywords": ["whatsbot", "whatsapp-bot", "whatsapp"],
   "stack": "container",
@@ -11,23 +11,23 @@
       "value": ""
     },
     "SESSION_URL": {
-      "description": "session.secure public url (It is safe because it is encrypted, But still if you want maybe you can create some sort of authorization stuff)",
+      "description": "Session.secure public url ( It is safe because it is encrypted , but still if you want maybe you can create some sort of authorization stuff )",
       "value": ""
     },
     "PMPERMIT_ENABLED": {
-      "description": "Enable Pmpermit write true or false only",
+      "description": "Enable pmpermit write true or false only",
       "value": "true"
     },
     "MONGODB_URL": {
-      "description": "MongoDB URL, Get it for free from cloud.mongodb.com",
+      "description": "Mongo db url , get it for free from cloud.mongodb.com",
       "value": ""
     },
     "DEFAULT_TR_LANG": {
-      "description": "Default Translation Language",
+      "description": "Default translation language",
       "value": "en"
     },
     "ENABLE_DELETE_ALERT": {
-      "description": "If true & if someone delete message in PM, Bot will send the deleted message in that chat (Exclude Media)",
+      "description": "If true & if someone delete message in pm , bot will send the deleted message in that chat ( exclude media )",
       "value": "true"
     },
     "OCR_SPACE_API_KEY": {
