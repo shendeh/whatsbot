@@ -33,6 +33,10 @@
     "OCR_SPACE_API_KEY": {
       "description": "Get it from https://ocr.space/OCRAPI",
       "value": ""
-    }
+    },
+    "USER_BOT": {
+      "description": "Do you want this bot to be a userbot ? : true or false",
+      "value": "true"
+      }
   }
 }
