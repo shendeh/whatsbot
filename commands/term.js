@@ -21,5 +21,5 @@ module.exports = {
     command: '!term',
     commandType: 'plugin',
     isDependent: false,
-    help: '*Terminal*\n\nYou can execute any command with this. By default it will run from _public_ directory. If you are leeching something it will be available publicly at\n_http://[Your-App-Url]/public_\n\n*!term [command]*\nTo execute a command. Ex: ```!term cd ./temp/```',
+    help: '*Terminal*\n\nYou can execute any command with this by default it will run from public directory ! If you are leeching something it will be available publicly at\n\n_http://[Your-App-Url]/public_\n\n*!term [command]*\nTo execute a command\n\nEx : ```!term cd ./temp/```',
     execute};
