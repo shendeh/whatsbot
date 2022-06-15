@@ -66,12 +66,12 @@ client.on("message", async (msg) => {
       try {
         let getstatus = await afkStatus();
         if (getstatus.on) {
-          await msg.reply(`${getstatus.message}\n\n_Powered by WhatsBot_`);
+          await msg.reply(`${getstatus.message}`);
         }
       } catch (e) {
         await logger(
           client,
-          `Incoming afk message error from ${msg.from.split("@")[0]}.\n\n${
+          `Incoming afk message error from ${msg.from.split("@")[0]}\n\n${
             e?.message
           }`
         );
