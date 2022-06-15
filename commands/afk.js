@@ -27,7 +27,7 @@ const execute = async (client, msg, args) => {
       case "status": {
         let getstatus = afkStatus();
         let msgtosend = `AFK mode is ${getstatus.on ? "on" : "off"}.${
-          getstatus.on ? `\n\nMessage: ${getstatus.message}` : ""
+          getstatus.on ? `\n\nMessage : ${getstatus.message}` : ""
         }`;
 
         await client.sendMessage(msg.to, msgtosend);
