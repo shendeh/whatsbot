@@ -12,7 +12,7 @@ const execute = async (client, msg, args) => {
         let message = args.join(" ");
         if (!message) message = "Currently I'm away I will be back soon";
         startAfk(message);
-        let msgtosend = `AFK mode is now on.\n\nMessage: ${message}`;
+        let msgtosend = `Afk mode is now on\n\nMessage : ${message}`;
         await client.sendMessage(msg.to, msgtosend);
         break;
       }
@@ -40,7 +40,7 @@ const execute = async (client, msg, args) => {
       }
     }
   } catch (error) {
-    let messagetosend = `Afk command failed.\n\n${error?.message}`;
+    let messagetosend = `Afk command failed\n\n${error?.message}`;
     await client.sendMessage(msg.to, messagetosend);
   }
 };
