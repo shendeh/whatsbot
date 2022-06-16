@@ -19,11 +19,11 @@ const rl = readline.createInterface({
 });
 
 rl.question(
-  "Enter password to encrypt session (You need to put this in ENV): ",
+  "Enter password to encrypt session ( You need to put this in env ) : ",
   (answer) => {
     password = answer;
-    console.log("Password set to:", password);
-    console.log("Generating QR Code...");
+    console.log("Password set to :", password);
+    console.log("Generating qr code...");
     rl.close();
     client.initialize();
   }
