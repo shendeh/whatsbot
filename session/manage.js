@@ -90,7 +90,7 @@ module.exports = {
       }
     } catch (error) {
       throw new Error(
-        `Session fetching failed. If you are using Local machine or VPS please remove 'SESSION_URL' from Enviroment Variable. ${error.toString()}`
+        `Session fetching failed if you are using local machine or vps please remove 'SESSION_URL' from enviroment variable ${error.toString()}`
       );
     }
   },
