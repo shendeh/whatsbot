@@ -9,7 +9,7 @@
 
 <p align="center">
 <a href="https://github.com/Dark-team-11/Whats/releases">
-    <img src="https://shields.io/badge/WHATSBOT-Version--3.0.0-red?logo=whatsapp&style=for-the-badge"
+    <img src="https://shields.io/badge/WHATS-Version--3.0.0-red?logo=whatsapp&style=for-the-badge"
          alt="Version"></a><br>
    <a href="https://github.com/Dark-team-11/Whats/wiki">
  <img src="https://shields.io/badge/WIKI-red?style=for-the-badge" alt="Wiki"></a>
