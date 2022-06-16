@@ -1,19 +1,19 @@
 <!-- <h1 align="center">
-  <a href="https://github.com/tuhinpal/WhatsBot"><img src="https://telegra.ph/file/96ccad5945c18944c5f15.png" alt="whatsbot" width="290"></a>
+  <a href="https://github.com/Dark-team-11/Whats"><img src="https://telegra.ph/file/96ccad5945c18944c5f15.png" alt="WHATS" width="290"></a>
   <br>
 <b>Whatsbot</b>
 </h1>
-<h4 align="center">Moduler UserBot for Whatsapp</h4> -->
+<h4 align="center">Moduler userbot for what's app</h4> -->
 
 ![WhatsBot](https://socialify.git.ci/tuhinpal/WhatsBot/image?description=1&font=Source%20Code%20Pro&forks=1&language=1&owner=1&pattern=Floating%20Cogs&stargazers=1&theme=Dark) <br>
 
 <p align="center">
-<a href="https://github.com/tuhinpal/WhatsBot/releases">
+<a href="https://github.com/Dark-team-11/Whats/releases">
     <img src="https://shields.io/badge/WHATSBOT-Version--3.0.0-red?logo=whatsapp&style=for-the-badge"
          alt="Version"></a><br>
-   <a href="https://github.com/tuhinpal/WhatsBot/wiki">
+   <a href="https://github.com/Dark-team-11/Whats/wiki">
  <img src="https://shields.io/badge/WIKI-red?style=for-the-badge" alt="Wiki"></a>
-  <a href="https://github.com/tuhinpal/WhatsBot/wiki/Demo">
+  <a href="https://github.com/Dark-team-11/Whats/wiki/Demo">
  <img src="https://shields.io/badge/DEMO-red?style=for-the-badge" alt="Demo"></a>
     <a href="#deploy-">
 <img src="https://shields.io/badge/DEPLOY-red?style=for-the-badge" alt="Deploy"></a>
@@ -32,32 +32,32 @@
 ### Features :
 
 - Modular
-- Pmpermit Included
-- Easily Deployable
-- Ban Free (Using Whatsapp Web)
-- Easy to Use
-- Directory Listing in Web Server
-- Terminal Included
-- Encrypted Traffic
+- Pmpermit included
+- Easily deployable
+- Ban free ( Using what's app web )
+- Easy to use
+- Directory listing in web server
+- Terminal included
+- Encrypted traffic
 
-### Some useful Plugins :
+### Some useful plugins :
 
-- **pmpermit** - Permission for direct message
-- **term** - Terminal in Whatsapp
-- **yt** - Download Youtube video from link
-- **weather** - Lookup today's weather
-- **carbon** - Generate beautiful image from text
-- **sing** - Download a song by search
-- **qr** - Generate QR from text
-- **directlink** - Get direct link of photos
-- **tr** - Translate Text
-- **ud** - Urban Dictionary
-- **sticker** - Make sticker from Image
-- **crypto** - Fetch Latest Price of a CryptoCurrency
-- **watch** - Find out where to watch a Movie/Show
-- **shorten** - Get Short URL
-- **ocr** - Extract Text from Image
-- **courier** - Fetches latest status of Courier/Shipments from multiple providers
+- **Pmpermit** - Permission for direct message
+- **Term** - Terminal in what's app
+- **Yt** - Download youtube video from link
+- **Weather** - Lookup today's weather
+- **Carbon** - Generate beautiful image from text
+- **Sing** - Download a song by search
+- **Qr** - Generate qr from text
+- **Directlink** - Get direct link of photos
+- **Tr** - Translate text
+- **Ud** - Urban dictionary
+- **Sticker** - Make sticker from image
+- **Crypto** - Fetch latest price of a crypto currency
+- **Watch** - Find out where to watch a movie
+- **Shorten** - Get short url
+- **Ocr** - Extract text from image
+- **Courier** - Fetches latest status of shipments from multiple providers
 
 [More modules]("https://github.com/tuhinpal/WhatsBot/wiki/Commands")
 
