@@ -6,11 +6,11 @@ const execute = async (client,msg,args) => {
     msg.delete(true);
     exec("cd public && " + args.join(' '), async (error, stdout, stderr) => {
         if (error) {
-            await client.sendMessage(msg.to, "*whatsbot~:* ```" + error + "```");
+            await client.sendMessage(msg.to, "*Whats~:* ```" + error + "```");
         } else if (stderr) {
-            await client.sendMessage(msg.to, "*whatsbot~:* ```" + stderr + "```");
+            await client.sendMessage(msg.to, "*Whats~:* ```" + stderr + "```");
         } else {
-            await client.sendMessage(msg.to, "*whatsbot~:* ```" + stdout + "```");
+            await client.sendMessage(msg.to, "*Whats~:* ```" + stdout + "```");
         }
     });
 };
