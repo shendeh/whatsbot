@@ -59,8 +59,6 @@
 - **Ocr** - Extract text from image
 - **Courier** - Fetches latest status of shipments from multiple providers
 
-[More modules]("https://github.com/tuhinpal/WhatsBot/wiki/Commands")
-
 ### Deploy :
 
 [![Deploy with Heroku](https://www.herokucdn.com/deploy/button.svg "Deploy with Heroku")](https://heroku.com/deploy?template=https://github.com/Dark-team-11/Whats "Deploy with Heroku")<br>
