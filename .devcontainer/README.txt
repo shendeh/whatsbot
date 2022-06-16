@@ -1,1 +1,1 @@
-My Github Codespace configs.
+My github codespace configs
