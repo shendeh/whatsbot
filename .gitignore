@@ -5,6 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 node_modules/
+package-lock.json
 npm
 .eslintcache
 session.json
@@ -15,10 +16,6 @@ cache/*
 !cache/readme.txt
 public/*
 !public/readme.txt
-.wwebjs_auth/*
-.wwebjs_auth
-session.zip
-session.txt
-session-output/*
-session-output
+session/assets/qr.svg
+.wwebjs_auth/
 session.secure
