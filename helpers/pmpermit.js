@@ -2,7 +2,6 @@
 //jshint -W033
 const fs = require("fs");
 const path = require("path");
-const { Client } = require("whatsapp-web.js");
 const database = require("../db");
 
 async function insert(id) {
@@ -91,88 +90,6 @@ async function nopermit(id) {
     }
   }
 }
-//MESSAGE DELETE SHOW OR NO?
-async function msg_del(group,phone,bool) {
-
-  try {
-    var { conn, coll } = await database("DeletedMessages");
-    await coll.updateOne({ group_id: group, phone_num: phone},{ $set: { show: bool }},{upsert: true});
-    return true;
-  } catch (error) {
-    return false;
-  } finally {
-    if (conn) {
-      await conn.close();
-    }
-  }
-}
-
-
-
-//-----------------TAG FINDER STARTS-----------------------
-async function Tag_Saver(id,msg,tagger,tagged_one,Chat_id) {
-
-    try {
-      var { conn, coll } = await database("TaggedMessages");
-      await coll.insertOne({ number: id, message: msg, Tagged_By: tagger, TaggedOne: tagged_one, Chat: Chat_id});
-      return true;
-    } catch (error) {
-      return false;
-    } finally {
-      if (conn) {
-        await conn.close();
-      }
-    }
-  }
-
-  async function FT(id) {
-    try {
-      var { conn, coll } = await database("Tagged Messages");
-      var data = await coll.find({ number: "917042053980" })
-      
-      // await chat.sendMessage("HI");
-      // await chat.sendMessage(data);
-      // await chat.sendMessage(JSON.stringify(data));
-      await chat.sendMessage(JSON.stringify({ ...data, found: true }));
-      if (data && data.permit) {
-          // await chat.sendMessage("_Almost there_")
-        // await chat.sendMessage(JSON.stringify({ ...data, found: true }));
-        
-        // save the cache for later usage
-        fs.writeFileSync(
-          path.join(__dirname, `../cache/tags.json`),
-          JSON.stringify({ ...data, found: true })
-        );
-      }
-      return data ? { ...data, found: true } : { found: false };
-    } catch (error) {
-      return { found: false };
-    } finally {
-      if (conn) {
-        await conn.close();
-      }
-    }
-  }
-
-  async function Tag_Msg_Reader(id) {
-    try {
-      try {
-        var checkPermit = JSON.parse(
-          fs.readFileSync(path.join(__dirname, `../cache/tags.json`), "utf8")
-        );
-        // await chat.sendMessage(msg.to,"Tag_Msg_Reader Func is working");
-        // await chat.sendMessage(msg.to,checkPermit.message);
-      } catch (error) {
-          console.log("Error");
-      }
-      return checkPermit.message;
-    } catch (e) {
-      return true;
-    }
-  }
-
-  //----------------TAG FINDER ENDS------------------
-  
 
 async function handler(id) {
   // first check for cache
@@ -196,9 +113,8 @@ async function handler(id) {
     if (checkPermit.times > 3) {
       return {
         permit: false,
-        block: false,
-        msg: `Umm as I have already mentioned above that this is not a right place for you to spam however you ignored that message so I just blocked you\n\nNow you can't do anything until my mistress comes online and unblocks you ! Good bye demon have a great day ahead
-`,
+        block: true,
+        msg: `Umm as I have already mentioned above that this is not a right place for you to spam however you ignored that message so I just blocked you\n\nNow you can't do anything until my mistress comes online and unblocks you ! Good bye demon have a great day ahead`,
       };
     } else {
       var updateIt = await updateviolant(id, checkPermit.times + 1);
@@ -210,7 +126,7 @@ async function handler(id) {
       return {
         permit: false,
         block: false,
-        msg: `Hey I haven't approved you for personal messaging me yet , my mistress will respond when she comes back online if she wants to\n\nPlease don't spam unless you wish to be blocked and reported`,
+        msg: `You have ${checkPermit.times} warning(s)`,
       };
     }
   } else {
@@ -238,8 +154,4 @@ module.exports = {
   permit,
   nopermit,
   isPermitted,
-  Tag_Saver,
-  FT,
-  Tag_Msg_Reader,
-  msg_del,
 };
