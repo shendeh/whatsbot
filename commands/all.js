@@ -57,7 +57,7 @@ const execute = async (client,msg,args) => {
       
     module.exports = {
       name: "All",
-      description: "Tag everyone in a group",
+      description: "Tags everyone in a group",
       command: "!all",
       commandType: "admin",
       isDependent: false,
