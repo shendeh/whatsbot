@@ -18,6 +18,10 @@
       "description": "Enable pmpermit write true or false only",
       "value": "true"
     },
+    "REMOVE_BG_API_KEY": {
+      "description": "Get it for free from https://www.remove.bg/api#remove-background",
+      "value": ""
+    },
     "MONGODB_URL": {
       "description": "Mongo db url , get it for free from cloud.mongodb.com",
       "value": ""
