@@ -30,8 +30,12 @@
       "description": "Default translation language",
       "value": "en"
     },
-    "ENABLE_DELETE_ALERT": {
-      "description": "If true & if someone delete message in pm , bot will send the deleted message in that chat ( exclude media )",
+    "DM_DELETE_ALERT": {
+      "description": "Show deleted messages in dm or not : true or false",
+      "value": "true"
+    },
+    "GROUP_DELETE_ALERT":{
+      "description":"Show deleted messages in a group or not : true or false",
       "value": "true"
     },
     "OCR_SPACE_API_KEY": {
