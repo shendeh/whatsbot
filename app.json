@@ -18,10 +18,6 @@
       "description": "Enable pmpermit write true or false only",
       "value": "true"
     },
-    "REMOVE_BG_API_KEY": {
-      "description": "Get it for free from https://www.remove.bg/api#remove-background",
-      "value": ""
-    },
     "MONGODB_URL": {
       "description": "Mongo db url , get it for free from cloud.mongodb.com",
       "value": ""
@@ -30,12 +26,8 @@
       "description": "Default translation language",
       "value": "en"
     },
-    "DM_DELETE_ALERT": {
-      "description": "Show deleted messages in dm or not : true or false",
-      "value": "true"
-    },
-    "GROUP_DELETE_ALERT":{
-      "description":"Show deleted messages in a group or not : true or false",
+    "ENABLE_DELETE_ALERT": {
+      "description": "If true & if someone deletes message in pm , bot will send the deleted message in that chat ( Exclude media )",
       "value": "true"
     },
     "OCR_SPACE_API_KEY": {
