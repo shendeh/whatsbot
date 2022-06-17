@@ -11,7 +11,7 @@ module.exports = {
     name: 'Play',
     description: 'A quick way to play some games',
     command: '!play',
-    commandType: 'info',
+    commandType: 'abcd',
     isDependent: false,
     help: '*Play*\n\nType !play and touch any of the buttons on your screen',
     execute};
