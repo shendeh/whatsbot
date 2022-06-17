@@ -118,7 +118,7 @@ const execute = async (client,msg/*,args*/) => {
 };
 
 module.exports = {
-    name: 'Findtags', //name of the module
+    name: 'Find tags', //name of the module
     description: 'Sends all the messages you have been tagged in for the day', // short description of what this command does
     command: '!findtags',
     commandType: 'info',
