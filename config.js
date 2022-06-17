@@ -7,9 +7,7 @@ module.exports = {
   pmpermit_enabled: process.env.PMPERMIT_ENABLED || "true",
   mongodb_url: process.env.MONGODB_URL || process.env.MONGO_URL || "",
   default_tr_lang: process.env.DEFAULT_TR_LANG || "en",
-  group_delete_alert: process.env.GROUP_DELETE_ALERT || "true",
-  dm_del:process.env.DM_DELETE_ALERT || "true",
+  enable_delete_alert: process.env.ENABLE_DELETE_ALERT || "true",
   ocr_space_api_key: process.env.OCR_SPACE_API_KEY || "",
   userbot:process.env.USER_BOT||true,
-  RG:process.env.REMOVE_BG_API_KEY||"",
 };
