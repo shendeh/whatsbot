@@ -84,6 +84,6 @@ module.exports = {
     command: '!revoked',
     commandType: 'admin',
     isDependent: false,
-    help: '*Revoked*\n\nUse this to configure if the bot should display the deleted messages of a specific person or not\n\nUsage example\n!revoked @Yuki true"\nOR\n!revoked @Yuki false',
+    help: '*Revoked*\n\nUse this to configure if the bot should display the deleted messages of a specific person or not\n\nUsage example\n"!revoked @Yuki true"\n"!revoked @Yuki false"',
     execute
 };
