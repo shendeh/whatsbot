@@ -15,7 +15,7 @@ const execute = async (client,msg) => {
 module.exports = {
     name: 'Image maker',
     description: 'Generates image from sticker',
-    command: '!sticker',
+    command: '!image',
     commandType: 'plugin',
     isDependent: false,
     help: `*Image maker*\n\nCreates image from sticker\n\nReply an sticker with *!image* to get a image`,
