@@ -107,14 +107,14 @@ async function handler(id) {
     return {
       permit: false,
       block: false,
-      msg: `Hey I haven't approved you for personal messaging me yet , my mistress will respond when she comes back online if she wants to\n\nPlease don't spam unless you wish to be blocked and reported`,
+      msg: `Please wait my mistress will be back soon\n\nPlease don't spam my inbox`,
     };
   } else if (checkPermit.found && !checkPermit.permit) {
     if (checkPermit.times > 3) {
       return {
         permit: false,
         block: true,
-        msg: `Umm as I have already mentioned above that this is not a right place for you to spam however you ignored that message so I just blocked you\n\nNow you can't do anything until my mistress comes online and unblocks you ! Good bye demon have a great day ahead`,
+        msg: `Please wait my mistress will be back soon\n\nPlease don't spam my inbox`,
       };
     } else {
       var updateIt = await updateviolant(id, checkPermit.times + 1);
